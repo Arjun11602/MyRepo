@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ShoppingWebStore]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="http://automationpractice.com/index.php"/>
+  <listeners>
+    <listener class-name="com.Report.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="LoginTestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.Test.LoginTest">
+        <methods>
+          <include name="signInToApplication"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Test.LoginTest -->
+      <class name="com.Test.CasualDressPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="priceTagCheckTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Test.CasualDressPageTest -->
+      <class name="com.Test.HomePageTest">
+        <methods>
+          <include name="casualDresspageTitleTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Test.HomePageTest -->
+    </classes>
+  </test> <!-- LoginTestChrome(failed) -->
+</suite> <!-- Failed suite [ShoppingWebStore] -->
