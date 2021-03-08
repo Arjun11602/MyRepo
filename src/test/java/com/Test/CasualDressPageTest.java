@@ -37,7 +37,7 @@ public class CasualDressPageTest extends BaseTest {
 		HomePage Home=loginPage.LogIn(usernameId, password);
 	//	log.info("Enters the username and password");
 		casualDresPage casual=Home.selectCasualDress();
-		casual.proceedToCheckOut();
+		//casual.proceedToCheckOut();
 		OrderPage order=casual.proceedToCheckOut();
 		String title=page.getPageTitle();
 		//log.info("asserting the orderpagetitle");

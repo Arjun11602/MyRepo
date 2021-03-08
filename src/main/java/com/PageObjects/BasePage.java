@@ -103,7 +103,7 @@ public class BasePage extends Page {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);	
 	}
 	
-	public void TakeScreenShot() throws IOException {
+	public static void TakeScreenShot() throws IOException {
 		
 		TakesScreenshot screen=((TakesScreenshot) driver);
 		File img=screen.getScreenshotAs(OutputType.FILE);
