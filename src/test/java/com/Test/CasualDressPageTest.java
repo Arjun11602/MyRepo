@@ -28,7 +28,17 @@ public class CasualDressPageTest extends BaseTest {
 		HomePage Home=loginPage.LogIn(usernameId, password);
 		casualDresPage casual=Home.selectCasualDress();
 		String text=casual.priceTagcheck();
-		Assert.assertEquals(text, "$26.00","price not matching");
+		if(text.equals("$26.00")) {
+			Assert.assertEquals(true, false);
+		}
+		else {
+			try {
+				BasePage.TakeScreenShot(driver);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			Assert.assertEquals(true, false);
+		}
 	}
 	
 	public void proceedToCheckOutText() throws InterruptedException {

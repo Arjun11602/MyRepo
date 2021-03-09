@@ -103,9 +103,9 @@ public class BasePage extends Page {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);	
 	}
 	
-	public static void TakeScreenShot() throws IOException {
+	public static void TakeScreenShot(WebDriver driver) throws IOException {
 		
-		TakesScreenshot screen=((TakesScreenshot) driver);
+		TakesScreenshot screen=((TakesScreenshot)driver);
 		File img=screen.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(img, new File(System.getProperty("user.dir"),"//ScreenShots//img.png"));
 		
